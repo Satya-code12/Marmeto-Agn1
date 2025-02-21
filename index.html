@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+
+    <section class="main-container main-container-1">
+        <div class="container">
+            <div class="image-box">
+                <img src="Image.png" alt="Cover image" width="170" height="196">
+            </div>
+            <div class="text-class">
+                <h2 style="color: black;">OTP Verification</h2>
+                <p>Enter email and phone number to receive a One Time Password</p>
+                
+                <div class="input-wrapper">
+                    <label for="email" class="label-class">Email</label>
+                    <input type="email" id="email" required placeholder="user@marmeto.com" class="input-class">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="phone" class="label-class">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+44 9999999999" class="input-class" 
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                </div>
+
+                <button class="btn continue-btn">Continue</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-container main-container-2" style="display: none;">
+        <div class="container">
+            <div class="text-class">
+                <h2 style="color: black;">Verification Code</h2>
+                <p>We have sent the verification code to your email address</p>
+
+                <div class="otp-container">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                    <input type="text" maxlength="1" class="otp-input">
+                </div>
+
+                <button class="btn otp-verify-btn">Confirm</button>
+            </div>
+        </div>
+    </section>
+
+ 
+    <section class="main-container main-container-3" style="display: none;">
+        <div class="container">
+            <div class="content">
+                <img src="Ellipse 1.png" alt="Success Icon" class="success-icon">
+                <h1>Hey <span id="user-name">{USER}</span>!</h1>
+                <p>Congratulations! You have been successfully authenticated.</p>
+                <button class="btn done-btn">Done</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="Script.js"></script>
+</body>
+</html>
